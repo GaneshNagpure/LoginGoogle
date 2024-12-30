@@ -1,0 +1,52 @@
+{% extends 'base.html' %}
+{% block content %}
+{% load socialaccount %}
+
+
+<div class="container mt-5">
+    <h2 class="text-center mb-4">Login</h2>
+    <form action="{% url 'login' %}" method="post">
+        {% csrf_token %}
+        
+        <!-- Username input -->
+        <div class="form-group">
+            <label for="username">Username</label>
+            <input type="text" class="form-control" id="username" name="username" placeholder="Enter your username" required>
+        </div>
+
+        <!-- Password input -->
+        <div class="form-group">
+            <label for="password">Password</label>
+            <input type="password" class="form-control" id="password" name="password" placeholder="Enter your password" required>
+        </div>
+
+        <!-- Submit button -->
+        <button type="submit" class="btn btn-primary btn-block mb-4">Login</button>
+
+        <p>Don't have an account? <a href="{% url 'register' %}">Register</a></p>
+    </form>
+
+    <div class="text-center mt-4">
+        <p>Or login with</p>
+        
+        <!-- Social Login Buttons -->
+        <div class="d-flex justify-content-center">
+            <!-- Google Login -->
+            <a href="{% provider_login_url 'google' %}" class="btn btn-danger btn-sm mx-2" style="width: 150px;">
+                Login with Google
+            </a>
+
+            <!-- Facebook Login -->
+            <a href="#" class="btn btn-primary btn-sm mx-2" style="width: 150px;">
+                Login with Facebook
+            </a>
+
+            <!-- Twitter Login -->
+            <a href="#" class="btn btn-info btn-sm mx-2" style="width: 150px;">
+                Login with Twitter
+            </a>
+        </div>
+    </div>
+</div>
+
+{% endblock %}
