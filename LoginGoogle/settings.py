@@ -134,7 +134,7 @@ AUTHENTICATION_BACKENDS = [
     'django.contrib.auth.backends.ModelBackend',  # Default auth backend
     'allauth.account.auth_backends.AuthenticationBackend',  # Required for allauth
 ]
-
+SOCIALACCOUNT_LOGIN_ON_GET = True
 # Redirect after successful login
 LOGIN_REDIRECT_URL = 'home'
 
@@ -159,3 +159,5 @@ SOCIALACCOUNT_PROVIDERS = {
 
 ACCOUNT_EMAIL_VERIFICATION = "optional"  # Adjust according to requirements
 ACCOUNT_LOGOUT_ON_GET = True
+ACCOUNT_LOGOUT_ON_GET = True
+
