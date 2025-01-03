@@ -148,8 +148,8 @@ SITE_ID = 1  # Update if multiple sites are used
 SOCIALACCOUNT_PROVIDERS = {
     'google': {
         'APP': {
-            'client_id': 'your-clien-id',  # Replace with Google client ID
-            'secret': 'your-client-secret',  # Replace with Google client secret
+            'client_id': 'your-clien-id_to_be_mentioned_here',  # Replace with Google client ID
+            'secret': 'your-client-secret_to_be_mentioned_here',  # Replace with Google client secret
         },
         'SCOPE': ['profile', 'email'],  # Permissions requested from Google
         'AUTH_PARAMS': {'access_type': 'online'},  # Optional
